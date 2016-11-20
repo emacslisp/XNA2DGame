@@ -1,0 +1,4 @@
+E:\workspace\xna\PlatformerReading\PlatformerReading\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\workspace\xna\PlatformerReading\PlatformerReading\Content\obj\x86\Debug\Sound\sound.xml
+D:\MyProject\PlatformerReading\PlatformerReading\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MyProject\PlatformerReading\PlatformerReading\Content\obj\x86\Debug\Sound\sound.xml
