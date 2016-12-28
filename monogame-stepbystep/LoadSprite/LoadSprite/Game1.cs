@@ -46,7 +46,11 @@ namespace LoadSprite
 
             // TODO: use this.Content to load your game content here
 
-            background = Content.Load<Texture2D>("stars"); // change these names to the names of your images
+            Content.RootDirectory = "Content";
+
+            //System.IO.Stream stream = TitleContainer.OpenStream("Content/1.jpg");
+            //background = Texture2D.FromStream(GraphicsDevice, stream);
+            background = Content.Load<Texture2D>("1.jpg"); // change these names to the names of your images
             //shuttle = Content.Load<Texture2D>("shuttle");  // if you are using your own images.
             //earth = Content.Load<Texture2D>("earth");
         }
@@ -87,7 +91,7 @@ namespace LoadSprite
 
             spriteBatch.Begin();
 
-            spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White);
+            spriteBatch.Draw(background, new Vector2(400, 240), Color.White);
             //spriteBatch.Draw(earth, new Vector2(400, 240), Color.White);
             //spriteBatch.Draw(shuttle, new Vector2(450, 240), Color.White);
 
