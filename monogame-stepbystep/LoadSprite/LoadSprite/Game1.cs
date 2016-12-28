@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace LoadSprite
 {
@@ -12,9 +14,11 @@ namespace LoadSprite
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        private Texture2D background;
+        private Texture2D testSprite;
         private Texture2D shuttle;
         private Texture2D earth;
+        private SoundEffect effect;
+        private Song effect2;
 
         public Game1()
         {
@@ -46,13 +50,17 @@ namespace LoadSprite
 
             // TODO: use this.Content to load your game content here
 
-            Content.RootDirectory = "Content";
-
             //System.IO.Stream stream = TitleContainer.OpenStream("Content/1.jpg");
             //background = Texture2D.FromStream(GraphicsDevice, stream);
-            background = Content.Load<Texture2D>("1.jpg"); // change these names to the names of your images
+            testSprite = Content.Load<Texture2D>("1.jpg"); // change these names to the names of your images
             //shuttle = Content.Load<Texture2D>("shuttle");  // if you are using your own images.
             //earth = Content.Load<Texture2D>("earth");
+
+            this.effect = Content.Load<SoundEffect>("explode");
+            this.effect.Play();
+
+            this.effect2 = Content.Load<Song>("background");
+            //MediaPlayer.Play(effect2);
         }
 
         /// <summary>
@@ -74,6 +82,16 @@ namespace LoadSprite
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            //@example: xna - handler key input
+            KeyboardState state = Keyboard.GetState();
+
+            if (state.IsKeyDown(Keys.Left))
+            {
+                //MediaPlayer.Play(effect);
+                // do something here
+                effect.Play();
+            }
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -91,7 +109,7 @@ namespace LoadSprite
 
             spriteBatch.Begin();
 
-            spriteBatch.Draw(background, new Vector2(400, 240), Color.White);
+            spriteBatch.Draw(testSprite, new Vector2(400, 240), Color.White);
             //spriteBatch.Draw(earth, new Vector2(400, 240), Color.White);
             //spriteBatch.Draw(shuttle, new Vector2(450, 240), Color.White);
 
