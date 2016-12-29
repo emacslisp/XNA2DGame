@@ -12,6 +12,7 @@ namespace MonoUsingOpengl
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private Texture2D testSprite;
 
         private SoundEffect effect;
         private SoundEffect effectBackground;
@@ -43,6 +44,8 @@ namespace MonoUsingOpengl
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            this.testSprite = Content.Load<Texture2D>("1.jpg");
 
             this.effect = Content.Load<SoundEffect>("explode");
             this.effect.Play();
@@ -94,6 +97,11 @@ namespace MonoUsingOpengl
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(testSprite, new Vector2(400, 240), Color.White);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
