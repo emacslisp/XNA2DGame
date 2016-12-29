@@ -15,7 +15,7 @@
 
 #begin background.wav
 /importer:WavImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:background.wav
 

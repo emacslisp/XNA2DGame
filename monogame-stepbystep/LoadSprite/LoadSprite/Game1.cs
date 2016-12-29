@@ -18,7 +18,7 @@ namespace LoadSprite
         private Texture2D shuttle;
         private Texture2D earth;
         private SoundEffect effect;
-        private Song effect2;
+        private SoundEffect effect2;
 
         public Game1()
         {
@@ -59,8 +59,10 @@ namespace LoadSprite
             this.effect = Content.Load<SoundEffect>("explode");
             this.effect.Play();
 
-            this.effect2 = Content.Load<Song>("background");
+            //this.effect2 = Content.Load<Song>("background");
             //MediaPlayer.Play(effect2);
+            this.effect2 = Content.Load<SoundEffect>("background");
+            this.effect2.Play();
         }
 
         /// <summary>
