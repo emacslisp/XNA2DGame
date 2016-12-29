@@ -31,4 +31,4 @@
 bin
 obj
 
-.suo
+*.suo
