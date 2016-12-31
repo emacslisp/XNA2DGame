@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
 
 namespace MonoUsingOpengl
 {
@@ -16,6 +17,11 @@ namespace MonoUsingOpengl
 
         private SoundEffect effect;
         private SoundEffect effectBackground;
+
+        private Vector2 position = new Vector2(400, 240);
+
+        int speedX = 0;
+        int speedY = 0;
 
         public Game1()
         {
@@ -71,6 +77,7 @@ namespace MonoUsingOpengl
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            Trace.WriteLine(gameTime.ElapsedGameTime.TotalMilliseconds);
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
@@ -84,6 +91,24 @@ namespace MonoUsingOpengl
                 // do something here
                 effect.Play();
             }
+
+            if (position.X> 800)
+            {
+                speedX = -1;
+            }
+            else
+            {
+                speedX = 1;
+            }
+
+            if (position.Y > 800)
+            {
+                speedY = -1;
+            }
+            else speedY = 1;
+
+            position.X += speedX;
+            position.Y += speedY;
 
             base.Update(gameTime);
         }
@@ -99,7 +124,7 @@ namespace MonoUsingOpengl
             // TODO: Add your drawing code here
 
             spriteBatch.Begin();
-            spriteBatch.Draw(testSprite, new Vector2(400, 240), Color.White);
+            spriteBatch.Draw(testSprite, position, Color.White);
 
             spriteBatch.End();
 
