@@ -20,8 +20,8 @@ namespace MonoUsingOpengl
 
         private Vector2 position = new Vector2(400, 240);
 
-        int speedX = 0;
-        int speedY = 0;
+        int speedX = 1;
+        int speedY = 1;
 
         public Game1()
         {
@@ -92,20 +92,21 @@ namespace MonoUsingOpengl
                 effect.Play();
             }
 
-            if (position.X> 800)
+            if (position.X> GraphicsDevice.Viewport.Bounds.Width - testSprite.Width)
             {
                 speedX = -1;
             }
-            else
+            else if (position.X < 0)
             {
                 speedX = 1;
             }
 
-            if (position.Y > 800)
+            if (position.Y > GraphicsDevice.Viewport.Bounds.Height - testSprite.Height)
             {
                 speedY = -1;
             }
-            else speedY = 1;
+            else if (position.Y < 0)
+                speedY = 1;
 
             position.X += speedX;
             position.Y += speedY;
