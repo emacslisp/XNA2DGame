@@ -39,6 +39,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Game1.cs" />
+    <Compile Include="GameObject\AnimationPlayer.cs" />
+    <Compile Include="GameObject\Ball.cs" />
+    <Compile Include="GameObject\Blocks.cs" />
+    <Compile Include="GameObject\ConfigFile.cs" />
+    <Compile Include="GameObject\Dollar.cs" />
+    <Compile Include="GameObject\LeftPad.cs" />
+    <Compile Include="GameObject\Level.cs" />
+    <Compile Include="GameObject\Target.cs" />
+    <Compile Include="GameObject\TopPad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\main.ini" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
