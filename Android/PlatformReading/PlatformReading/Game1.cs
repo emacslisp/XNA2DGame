@@ -9,6 +9,7 @@ namespace PlatformReading
     /// </summary>
     public class Game1 : Game
     {
+        //@note: change visual studio to release to save as apk file
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
