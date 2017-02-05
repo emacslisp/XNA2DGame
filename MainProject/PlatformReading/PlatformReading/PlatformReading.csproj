@@ -83,14 +83,30 @@
     <Content Include="Content\GameMenu\you_die.png" />
     <Content Include="Content\GameMenu\you_win.png" />
     <Content Include="Content\hole.bmp" />
-    <Content Include="Content\Level\0.txt" />
-    <Content Include="Content\Level\1.txt" />
-    <Content Include="Content\Level\2.txt" />
-    <Content Include="Content\Level\3.txt" />
-    <Content Include="Content\Level\4.txt" />
-    <Content Include="Content\Level\5.txt" />
-    <Content Include="Content\Level\result.txt" />
-    <Content Include="Content\Level\t.txt" />
+    <Content Include="Content\Level\0.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Level\1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Level\2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Level\3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Level\4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Level\5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Level\result.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Level\t.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\pad.gif" />
     <Content Include="Content\pong.gif" />
     <Content Include="Content\Sound\applause.wav" />

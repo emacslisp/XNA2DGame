@@ -31,9 +31,9 @@ namespace PlatformReading
     public Vector2 pongPosition;
     public Vector2 pongSpeed = new Vector2(4,5);
 
-    public AudioEngine audioEngine;
-    public WaveBank waveBank;
-    public SoundBank soundBank;
+    //public AudioEngine audioEngine;
+    //public WaveBank waveBank;
+    //public //soundBank //soundBank;
 
     
     Random rnd = new Random((int)DateTime.Now.Ticks);
@@ -63,12 +63,12 @@ namespace PlatformReading
         // TODO: Construct any child components here
         InitDictionary();        
         content = new ContentManager(serviceProvider,"Content");
-        audioEngine = new AudioEngine("Content\\Sound\\sound.xgs");
-        waveBank = new WaveBank(audioEngine,"Content\\Sound\\Wave Bank.xwb");
-        if(waveBank != null)
-          {
-            soundBank = new SoundBank(audioEngine,"Content\\Sound\\Sound Bank.xsb");
-          }
+        //audioEngine = new AudioEngine("Content\\Sound\\sound.xgs");
+        //waveBank = new WaveBank(audioEngine,"Content\\Sound\\Wave Bank.xwb");
+        //if(waveBank != null)
+        //  {
+        //    //soundBank = new //soundBank(audioEngine,"Content\\Sound\\Sound Bank.xsb");
+        //  }
         LoadBlocks(path);
       }
 
@@ -110,7 +110,7 @@ namespace PlatformReading
         case '.':
           return new Block(null,BlockCollision.Passable);
         case 'x':
-          return LoadMapBlock("Sprite\\b",BlockCollision.Impassable);
+          return LoadMapBlock("Sprite\\block",BlockCollision.Impassable);
         case 'p':
           return LoadLeftPad(x,y);
         case 'm':
@@ -262,28 +262,28 @@ namespace PlatformReading
               if(pongSpeed.Y>0)
                 {
                   pongSpeed.Y = -pongSpeed.Y;
-                  soundBank.PlayCue("zap");              
+                  ////soundBank.PlayCue("zap");              
                 }
               return pongSpeed;
             case 3:
               if(pongSpeed.Y<0)
                 {
                   pongSpeed.Y = -pongSpeed.Y;
-                  soundBank.PlayCue("zap");              
+                  ////soundBank.PlayCue("zap");              
                 }
               return pongSpeed;
             case 10:
               if(pongSpeed.X>0)
                 {
                   pongSpeed.X = -pongSpeed.X;
-                  soundBank.PlayCue("zap");                              
+                  ////soundBank.PlayCue("zap");                              
                 }
               return pongSpeed;
             case 5:
               if(pongSpeed.X<0)
                 {
                   pongSpeed.X =  -pongSpeed.X;                  
-                  soundBank.PlayCue("zap");
+                  ////soundBank.PlayCue("zap");
                 }
               return pongSpeed;
               //            case 11:
@@ -302,7 +302,7 @@ namespace PlatformReading
                   float temp = pongSpeed.X;
                   pongSpeed.X = -pongSpeed.Y;
                   pongSpeed.Y = -temp;
-                  soundBank.PlayCue("zap");                  
+                  ////soundBank.PlayCue("zap");                  
                 }
               else if(pongSpeed.X<0&&pongSpeed.Y>0)
                 {
@@ -312,7 +312,7 @@ namespace PlatformReading
                 {
                   pongSpeed.Y =  - pongSpeed.Y;
                 }
-              soundBank.PlayCue("zap");              
+              ////soundBank.PlayCue("zap");              
               return pongSpeed;
             case 8:
               if(pongSpeed.X>0&&pongSpeed.Y>0)
@@ -329,7 +329,7 @@ namespace PlatformReading
                 {
                   pongSpeed.X =  - pongSpeed.X;
                 }
-              soundBank.PlayCue("zap");              
+              ////soundBank.PlayCue("zap");              
               return pongSpeed;
 
 
@@ -348,7 +348,7 @@ namespace PlatformReading
                 {
                   pongSpeed.Y =  - pongSpeed.Y;
                 }
-              soundBank.PlayCue("zap");              
+              ////soundBank.PlayCue("zap");              
               return pongSpeed;
               
             case 4:
@@ -366,7 +366,7 @@ namespace PlatformReading
                 {
                   pongSpeed.X =  - pongSpeed.X;
                 }
-              soundBank.PlayCue("zap");              
+              ////soundBank.PlayCue("zap");              
               return pongSpeed;
             }
 
@@ -403,22 +403,22 @@ namespace PlatformReading
             case 12:
               if(pongSpeed.Y>0)
                 pongSpeed.Y = -pongSpeed.Y;
-              soundBank.PlayCue("zap");                            
+              ////soundBank.PlayCue("zap");                            
               return pongSpeed;
             case 3:
               if(pongSpeed.Y<0)
                 pongSpeed.Y = -pongSpeed.Y;
-              soundBank.PlayCue("zap");                            
+              ////soundBank.PlayCue("zap");                            
               return pongSpeed;
             case 10:
               if(pongSpeed.X>0)
                 pongSpeed.X = -pongSpeed.X;
-              soundBank.PlayCue("zap");                            
+              ////soundBank.PlayCue("zap");                            
               return pongSpeed;
             case 5:
               if(pongSpeed.X<0)
                 pongSpeed.X =  -pongSpeed.X;
-              soundBank.PlayCue("zap");                            
+              ////soundBank.PlayCue("zap");                            
               return pongSpeed;
               //            case 11:
               //            case 13:
@@ -444,7 +444,7 @@ namespace PlatformReading
                       pongSpeed.X =  -pongSpeed.X;
                     }
                 }
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return pongSpeed;
               
             case 1:
@@ -462,7 +462,7 @@ namespace PlatformReading
                 {
                   pongSpeed.Y =  - pongSpeed.Y;
                 }
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return pongSpeed;
             case 8:
               if(pongSpeed.X>0&&pongSpeed.Y>0)
@@ -479,7 +479,7 @@ namespace PlatformReading
                 {
                   pongSpeed.X =  - pongSpeed.X;
                 }
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return pongSpeed;
 
 
@@ -498,7 +498,7 @@ namespace PlatformReading
                 {
                   pongSpeed.Y =  - pongSpeed.Y;
                 }
-              soundBank.PlayCue("zap");              
+              //soundBank.PlayCue("zap");              
               return pongSpeed;
               
             case 4:
@@ -516,7 +516,7 @@ namespace PlatformReading
                 {
                   pongSpeed.X =  - pongSpeed.X;
                 }
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return pongSpeed;
             }
 
@@ -581,7 +581,7 @@ namespace PlatformReading
           if(b.Intersects(ballBox))
             {
               isBallDie = true;
-              soundBank.PlayCue("explode");
+              //soundBank.PlayCue("explode");
               return;
             }
         }
@@ -595,7 +595,7 @@ namespace PlatformReading
           if(b.Intersects(ballBox))
             {
               isBallDie = true;
-              soundBank.PlayCue("explode");
+              //soundBank.PlayCue("explode");
               return;
             }
         }
@@ -612,7 +612,7 @@ namespace PlatformReading
           BoundingBox dollarBox = new BoundingBox(new Vector3(dollar.position.X,dollar.position.Y,0),new Vector3(dollar.position.X + 20,dollar.position.Y + 20,0));
           if(ball.Intersects(dollarBox))
             {
-              soundBank.PlayCue("plop");
+              //soundBank.PlayCue("plop");
               dollar.position = new Vector2(rnd.Next(20,500),rnd.Next(20,500));
               score++;
             }
@@ -807,7 +807,7 @@ namespace PlatformReading
 
       if(switch_c)
         {
-          soundBank.PlayCue("zap");                        
+          //soundBank.PlayCue("zap");                        
           return speed;
         }
 
@@ -819,19 +819,19 @@ namespace PlatformReading
               float temp = speed.X;
               speed.X =  -speed.Y;
               speed.Y =  -temp;
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return speed;
             }
           else if(speed.Y<0&&speed.X>0)
             {
               speed.Y =  - speed.Y;
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return speed;
             }
           else if(speed.Y>0&&speed.X<0)
             {
               speed.X =  - speed.X;
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return speed;
             }
           return speed;
@@ -846,7 +846,7 @@ namespace PlatformReading
               float temp = speed.X;
               speed.X =  -speed.Y;
               speed.Y = -temp;
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return speed;
             }
           else if(speed.Y<0&&speed.X>0)
@@ -857,7 +857,7 @@ namespace PlatformReading
           else if(speed.Y>0&&speed.X<0)
             {
               speed.Y =  - speed.Y;
-              soundBank.PlayCue("zap");                            
+              //soundBank.PlayCue("zap");                            
               return speed;
             }
           return speed;
@@ -872,19 +872,19 @@ namespace PlatformReading
               float temp = speed.X;
               speed.X =  speed.Y;
               speed.Y = temp;
-              soundBank.PlayCue("zap");                        
+              //soundBank.PlayCue("zap");                        
               return speed;
             }
           else if(speed.Y>0&&speed.X>0)
             {
               speed.X =  - speed.X;
-              soundBank.PlayCue("zap");                        
+              //soundBank.PlayCue("zap");                        
               return speed;
             }
           else if(speed.Y<0&&speed.X<0)
             {
               speed.Y =  - speed.Y;
-              soundBank.PlayCue("zap");                        
+              //soundBank.PlayCue("zap");                        
 
               return speed;
             }
@@ -901,21 +901,21 @@ namespace PlatformReading
               float temp = speed.X;
               speed.X = speed.Y;
               speed.Y = temp;
-              soundBank.PlayCue("zap");                        
+              //soundBank.PlayCue("zap");                        
               
               return speed;
             }
           else if(speed.Y>0&&speed.X>0)
             {
               speed.Y =  - speed.Y;
-              soundBank.PlayCue("zap");                        
+              //soundBank.PlayCue("zap");                        
               
               return speed;
             }
           else if(speed.Y<0&&speed.X<0)
             {
               speed.X =  - speed.X;
-              soundBank.PlayCue("zap");                        
+              //soundBank.PlayCue("zap");                        
               
               return speed;
             }
