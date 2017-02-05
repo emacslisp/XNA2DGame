@@ -51,7 +51,9 @@ namespace MonoUsingOpengl
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            this.testSprite = Content.Load<Texture2D>("1.jpg");
+            /*@example: load jpg as sprite - step 1: add 1.jpg into content.mgcb, build mgcb file
+             * */
+            this.testSprite = Content.Load<Texture2D>("1");
 
             this.effect = Content.Load<SoundEffect>("explode");
             this.effect.Play();

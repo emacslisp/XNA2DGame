@@ -57,9 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
-    <None Include="Content\1.jpg">
+    <EmbeddedResource Include="Content\1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </EmbeddedResource>
     <Content Include="Content\background.wav" />
     <Content Include="Content\explode.wav" />
     <Content Include="OpenTK.dll.config">
