@@ -70,12 +70,12 @@
     <Content Include="Content\2.txt" />
     <Content Include="Content\Animation\fire_down.bmp" />
     <Content Include="Content\Animation\fire_up.bmp" />
-    <Content Include="Content\Backgroud\b1.bmp" />
-    <Content Include="Content\Backgroud\b2.bmp" />
-    <Content Include="Content\Backgroud\b3.bmp" />
-    <Content Include="Content\Backgroud\b4.bmp" />
-    <Content Include="Content\Backgroud\b5.bmp" />
-    <Content Include="Content\Backgroud\b6.bmp" />
+    <Content Include="Content\Background\b1.bmp" />
+    <Content Include="Content\Background\b2.bmp" />
+    <Content Include="Content\Background\b3.bmp" />
+    <Content Include="Content\Background\b4.bmp" />
+    <Content Include="Content\Background\b5.bmp" />
+    <Content Include="Content\Background\b6.bmp" />
     <Content Include="Content\GameMenu\gameover.png" />
     <Content Include="Content\GameMenu\gamestart.png" />
     <Content Include="Content\GameMenu\gameStartBackgroud.png" />
@@ -117,7 +117,7 @@
   <ItemGroup>
     <None Include="Content\Animation\Thumbs.db" />
     <None Include="Content\Animation\vssver2.scc" />
-    <None Include="Content\Backgroud\vssver2.scc" />
+    <None Include="Content\Background\vssver2.scc" />
     <None Include="Content\Font\Hud.spritefont" />
     <None Include="Content\Font\vssver2.scc" />
     <None Include="Content\GameMenu\vssver2.scc" />

@@ -118,12 +118,12 @@ namespace PlatformReading
 
         protected void InitSound()
         {
-            audioEngine = new AudioEngine("Content\\Sound\\sound.xgs");
-            waveBank = new WaveBank(audioEngine, "Content\\Sound\\Wave Bank.xwb");
-            if (waveBank != null)
-            {
-                soundBank = new SoundBank(audioEngine, "Content\\Sound\\Sound Bank.xsb");
-            }
+            //audioEngine = new AudioEngine("Content\\Sound\\sound.xgs");
+            //waveBank = new WaveBank(audioEngine, "Content\\Sound\\Wave Bank.xwb");
+            //if (waveBank != null)
+            //{
+            //    soundBank = new SoundBank(audioEngine, "Content\\Sound\\Sound Bank.xsb");
+            //}
         }
 
 
@@ -136,7 +136,7 @@ namespace PlatformReading
             //      background = Content.Load<Texture2D>("background");
             for (int i = 1; i <= 6; i++)
             {
-                backgrounds.Add(Content.Load<Texture2D>("Backgroud\\b" + i.ToString()));
+                backgrounds.Add(Content.Load<Texture2D>("Background\\b" + i.ToString()));
             }
             gamestart = Content.Load<Texture2D>("GameMenu\\gamestart");
             help = Content.Load<Texture2D>("GameMenu\\help");
@@ -209,7 +209,7 @@ namespace PlatformReading
             {
                 if (!playBackGround)
                 {
-                    soundBank.PlayCue("background");
+                    //soundBank.PlayCue("background");
                     playBackGround = !playBackGround;
                 }
                 if (last.IsKeyDown(dict["pause"]) && keyboard.IsKeyUp(dict["pause"]))
@@ -330,7 +330,9 @@ namespace PlatformReading
             if (exitOrNot)
             {
                 if (level.goToNextLevel)
-                    soundBank.PlayCue("applause");
+                {
+                    //soundBank.PlayCue("applause");
+                }
 
                 KeyboardState keyboard = Keyboard.GetState();
                 bool isSpaceButton = keyboard.IsKeyDown(Keys.Space);
@@ -418,13 +420,13 @@ namespace PlatformReading
                 if (last.IsKeyDown(dict["down"]) && keybs.IsKeyUp(dict["down"]))
                 {
                     currentItem = (currentItem + 1) % 2;
-                    soundBank.PlayCue("plop");
+                    //soundBank.PlayCue("plop");
                 }
                 //          if(last.IsKeyDown(Keys.Up)&&keybs.IsKeyUp(Keys.Up))
                 if (last.IsKeyDown(dict["up"]) && keybs.IsKeyUp(dict["up"]))
                 {
                     currentItem = (currentItem + 1) % 2;
-                    soundBank.PlayCue("plop");
+                    //soundBank.PlayCue("plop");
                 }
 
                 if (last.IsKeyDown(Keys.Enter) && keybs.IsKeyUp(Keys.Enter))
@@ -447,7 +449,7 @@ namespace PlatformReading
             }
             else if (gameMode == GameMode.GameOver)
             {
-                soundBank.Dispose();
+                //soundBank.Dispose();
                 playBackGround = false;
                 spriteBatch.Begin();
                 spriteBatch.Draw(gameStartBackgroud, Vector2.Zero, Color.White);
