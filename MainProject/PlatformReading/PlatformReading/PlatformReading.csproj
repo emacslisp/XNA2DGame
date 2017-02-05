@@ -46,6 +46,7 @@
     <Compile Include="GameObject\Dollar.cs" />
     <Compile Include="GameObject\LeftPad.cs" />
     <Compile Include="GameObject\Level.cs" />
+    <Compile Include="GameObject\SpriteToRender.cs" />
     <Compile Include="GameObject\Target.cs" />
     <Compile Include="GameObject\TopPad.cs" />
     <Compile Include="Program.cs" />

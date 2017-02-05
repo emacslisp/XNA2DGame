@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 
-namespace PlatformerReading
+namespace PlatformReading
 {
     /// <summary>
     /// This is a game component that implements IUpdateable.
